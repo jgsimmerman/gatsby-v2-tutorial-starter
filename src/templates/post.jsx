@@ -22,6 +22,28 @@ const PostSuggestion = styled.div`
   margin: 1rem 3rem 0 3rem;
 `;
 
+const Wrapper = styled.section`
+  text-align: ${props => (props.center ? 'center' : '')};
+  margin: auto;
+  padding: 3rem 1.5rem;
+  width: 60%;
+  max-width: ${props => props.theme.layout[props.type]};
+  height: 100%;
+  flex: 1;
+
+
+
+  @media (max-width: ${props => props.theme.breakpoints.m}) {
+    width: 90%;
+  }
+
+  @media (max-width: ${props => props.theme.breakpoints.s}) {
+    width: 95%;
+  }
+`;
+
+
+
 const Post = ({ data, pageContext }) => {
   const { next, prev } = pageContext;
   const post = data.markdownRemark;
@@ -48,11 +70,11 @@ const Post = ({ data, pageContext }) => {
       />
       <Header title={title} cover={image} />
         
-      <Container>
+      <Wrapper>
        
         <ItemContent post={post.frontmatter} />
         
-      </Container>
+      </Wrapper>
       
     </Layout>
   );

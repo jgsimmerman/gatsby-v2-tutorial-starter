@@ -7,10 +7,11 @@ import { Header, BlogList } from 'components';
 import { Layout } from 'layouts';
 
 
-const CatalogWrapper = styled.div`
+const CatalogWrapper = styled.main`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  flex-basis: 100%;
   justify-content: space-between;
   align-items: flex-start;
 
@@ -27,13 +28,7 @@ const echeveria = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
-      {/*<Helmet title={'Catalog'} /> */}
-      {/* <Helmet htmlAttributes={{ lang: 'en' }}>
-      <title>{'Catalog'}</title>
-      <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" rel="stylesheet" type="text/css" />
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-      <script id="snipcart" src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-api-key="YjdiNWIyOTUtZTIyMy00MWMwLTkwNDUtMzI1M2M2NTgxYjE0"></script>
-      </Helmet> */}
+     
       <Header title="Echeveria">Sweet Leaf Succulents and Ornamental Plants</Header>
         
       <CatalogWrapper>
@@ -45,7 +40,7 @@ const echeveria = ({ data }) => {
           title={node.frontmatter.title}
           date={node.frontmatter.date}
           tags={node.frontmatter.tags}
-          excerpt={node.excerpt}
+          //excerpt={node.excerpt}
         />
       ))}
       </CatalogWrapper>

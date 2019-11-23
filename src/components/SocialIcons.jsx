@@ -3,11 +3,11 @@ import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 
 const SocialWrapper = styled.span`
-display: flex;
-align-items: right;
-position: right;
-/* width: 75%;
-height: 75%; */
+    display: flex;
+    align-items: right;
+    position: right;
+    /* width: 75%;
+    height: 75%; */
 `;
 
 const SocialIcons () => (
