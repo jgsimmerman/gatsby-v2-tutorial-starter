@@ -22,6 +22,15 @@ const PostSuggestion = styled.div`
   margin: 1rem 3rem 0 3rem;
 `;
 
+// This is identical to the Container.jsx wrapper, but 
+/* 
+  flex-basis: calc(99.9% * 1 / 3 - 2.5rem);
+  max-width: calc(99.9% * 1 / 3 - 2.5rem);
+  width: calc(99.9% * 1 / 3 - 2.5rem);
+*/
+// is removed. This is a stupid hack that needs to be refactored,
+// but this makes the ItemContent pages render correctly.
+
 const Wrapper = styled.section`
   text-align: ${props => (props.center ? 'center' : '')};
   margin: auto;
